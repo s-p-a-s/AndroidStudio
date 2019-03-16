@@ -14,7 +14,7 @@
         android:id="@+id/textView2"
         android:layout_width="330dp"
         android:layout_height="71dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:fontFamily="serif-monospace"
         android:shadowColor="@android:color/white"
@@ -27,13 +27,14 @@
 
     <ImageButton
         android:id="@+id/image_button_home"
-        android:layout_width="110dp"
-        android:layout_height="193dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="160dp"
+        android:layout_width="259dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="132dp"
         android:background="@android:color/transparent"
         android:clickable="true"
-        android:src="@drawable/off"
+        android:padding="200dp"
+        android:src="@drawable/off_fix"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

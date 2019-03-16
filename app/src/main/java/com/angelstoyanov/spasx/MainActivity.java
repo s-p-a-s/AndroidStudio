@@ -41,11 +41,11 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
             public void onClick(View v) {
                 //isOn = true;
                 if(isOn){
-                    ib.setImageResource(R.drawable.off);
+                    ib.setImageResource(R.drawable.off_fix);
                     isOn = false;
                 }
                 else{
-                    ib.setImageResource(R.drawable.on);
+                    ib.setImageResource(R.drawable.on_fix);
                     isOn = true;
                 }
             }

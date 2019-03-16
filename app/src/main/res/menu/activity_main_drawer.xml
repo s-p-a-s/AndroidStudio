@@ -6,14 +6,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_battery_full"
-            android:title="Battery is at 100%"/>
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_fullsignal"
-            android:title="Wifi Connected: True" />
-        <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_bluetooth_signal"
             android:title="Bluetooth Connected: True" />
@@ -22,15 +14,12 @@
     <item android:title="Connect">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_wifi_2"
-                android:title="You are currently: Connected" />
+                android:id="@+id/devices"
+                android:icon="@drawable/ic_devices_black_"
+                android:title="Devices"
+                />
 
         </menu>
     </item>
-    <item
-        android:id="@+id/connect_settings"
-        android:icon="@drawable/ic_settings_black_24dp"
-        android:title="Connection Settings" />
 
 </menu>
