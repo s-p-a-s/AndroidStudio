@@ -19,10 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FirstOption"></activity>
-        <activity android:name=".SecondOption"></activity>
-        <activity android:name=".ThirdOption"></activity>
-        <activity android:name=".Wifi"></activity>
+        <activity android:name=".Devices"></activity>
     </application>
 
 </manifest>

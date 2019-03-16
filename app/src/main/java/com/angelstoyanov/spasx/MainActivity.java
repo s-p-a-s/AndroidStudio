@@ -1,6 +1,7 @@
 package com.angelstoyanov.spasx;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -51,6 +52,8 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
             }
         });
 
+
+
     }
 
 
@@ -78,6 +81,7 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
         //if(id == R.id.connect_settings){
         //   Intent wifiSettings = new Intent(this,Wifi.class);
         //   this.startActivity(wifiSettings);
@@ -86,9 +90,9 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
 
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {
+            //return true;
+        //}
 
         return super.onOptionsItemSelected(item);
     }
@@ -99,11 +103,12 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        //if(id == R.id.connect_settings){
-          //  Intent wifiSettings = new Intent(MainActivity.this,Wifi.class);
-         //   this.startActivity(wifiSettings);
-          //  return true;
-        //}
+
+        if(id == R.id.devices){
+            Intent devices_intent = new Intent(MainActivity.this,Devices.class);
+           this.startActivity(devices_intent);
+            return true;
+        }
 
 
 
