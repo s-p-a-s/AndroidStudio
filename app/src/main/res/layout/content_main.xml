@@ -5,69 +5,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/test"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <Button
-        android:id="@+id/officeButton"
-
-        android:layout_width="270dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="44dp"
-
-        android:layout_marginTop="172dp"
-        android:background="@drawable/buttonshape"
-        android:shadowColor="#2D28A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:text="Office"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="330dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif-monospace"
+        android:shadowColor="@android:color/white"
+        android:text="S.P.A.S.\n Control Center"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
-
-        android:layout_width="270dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="48dp"
-
-        android:layout_marginTop="268dp"
-        android:background="@drawable/buttonshape"
-        android:shadowColor="#2D28A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:text="Living Room"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="199dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="348dp"
-        android:text="Bedroom 2"
+    <ImageButton
+        android:id="@+id/image_button_home"
+        android:layout_width="110dp"
+        android:layout_height="193dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="160dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:src="@drawable/off"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="355dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="56dp"
-        android:fontFamily="sans-serif-condensed"
-        android:shadowColor="@android:color/black"
-        android:text="Chose the room you want to control"
+        android:id="@+id/textView18"
+        android:layout_width="115dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="366dp"
+        android:layout_marginEnd="192dp"
+        android:fontFamily="serif"
+        android:text="Currently:Off"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="218dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="436dp"
+        android:fontFamily="serif"
+        android:text="Current Temperature: "
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="218dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="468dp"
+        android:fontFamily="serif"
+        android:text="Current Humudity: "
+        android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

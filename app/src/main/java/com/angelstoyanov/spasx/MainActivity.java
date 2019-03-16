@@ -1,9 +1,6 @@
 package com.angelstoyanov.spasx;
 
 import android.app.Activity;
-import android.content.Intent;
-
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -13,10 +10,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.ToggleButton;
+import android.widget.ImageButton;
 
 public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
+    private boolean isOn = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,41 +33,27 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //Buttons
-        Button button1 = (Button) findViewById(R.id.officeButton);
-        button1.setOnClickListener(new View.OnClickListener() {
+
+
+        final ImageButton ib = findViewById(R.id.image_button_home);
+        ib.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent openFirstOptionWindow = new Intent(v.getContext(),FirstOption.class);
-                startActivity(openFirstOptionWindow);
-
+                //isOn = true;
+                if(isOn){
+                    ib.setImageResource(R.drawable.off);
+                    isOn = false;
+                }
+                else{
+                    ib.setImageResource(R.drawable.on);
+                    isOn = true;
+                }
             }
         });
-        Button button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent openSecondOptionWindow = new Intent(v.getContext(),SecondOption.class);
-                startActivity(openSecondOptionWindow);
-
-            }
-        });
-        Button button3 = (Button) findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Intent openSecondOptionWindow = new Intent(v.getContext(),SecondOption.class);
-                startActivity(openSecondOptionWindow);
-
-            }
-        });
-
 
     }
+
+
 
     @Override
     public void onBackPressed() {
