@@ -14,7 +14,7 @@ import java.net.URL;
 
 public class Requests extends AsyncTask<String, String, String> {
     private String content = "";
-    public String URL = "http://10.106.0.203:8000/spas/relay/1";
+    public String URL = "http://10.106.3.105:8000/spas/relay1";
 
     @Override
     public String doInBackground(String... params) {

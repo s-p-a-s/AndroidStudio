@@ -12,10 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-import java.util.concurrent.ExecutionException;
-
-import request.Requests;
 
 public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
     private boolean isOn = false;
@@ -26,7 +24,6 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar); - Setting Disappear
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -44,13 +41,15 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         ib.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //isOn = true;
+                TextView textView = findViewById(R.id.textView18);
                 if(isOn){
                     ib.setImageResource(R.drawable.off_fix);
+                    textView.setText("Currently: Off");
                     isOn = false;
                 }
                 else{
                     ib.setImageResource(R.drawable.on_fix);
+                    textView.setText("Currently: On");
                     isOn = true;
                 }
             }
@@ -59,9 +58,6 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
 
 
     }
-
-
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -74,48 +70,24 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //if(id == R.id.connect_settings){
-        //   Intent wifiSettings = new Intent(this,Wifi.class);
-        //   this.startActivity(wifiSettings);
-        //    return true;
-        //}
-
-
-        //noinspection SimplifiableIfStatement
-        //if (id == R.id.action_settings) {
-            //return true;
-        //}
-
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-
         if(id == R.id.devices){
             Intent devices_intent = new Intent(MainActivity.this,Devices.class);
            this.startActivity(devices_intent);
             return true;
         }
-
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
