@@ -2,7 +2,6 @@ package com.angelstoyanov.spasx;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
@@ -13,7 +12,7 @@ import request.Requests;
 public class Devices extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceBundle){
+    protected void onCreate(Bundle savedInstanceBundle) {
         super.onCreate(savedInstanceBundle);
         setContentView(R.layout.activity_devices);
         Switch switch1 = findViewById(R.id.switch1);
@@ -23,7 +22,7 @@ public class Devices extends Activity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 isChecked = false;
-                if(isChecked = true){
+                if (isChecked = true) {
                     try {
                         new Requests().execute("POST", "1").get();
                     } catch (ExecutionException e) {
@@ -31,7 +30,8 @@ public class Devices extends Activity {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                } else if(isChecked = false){
+                    isChecked = false;
+                } else if (isChecked) {
                     try {
                         new Requests().execute("GET").get();
                     } catch (ExecutionException e) {
@@ -44,7 +44,6 @@ public class Devices extends Activity {
             }
         });
 
-            }
-
     }
 
+}

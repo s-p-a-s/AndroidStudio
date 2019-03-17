@@ -15,7 +15,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 
-public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
     private boolean isOn = false;
 
 
@@ -36,18 +36,16 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         navigationView.setNavigationItemSelectedListener(this);
 
 
-
         final ImageButton ib = findViewById(R.id.image_button_home);
         ib.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TextView textView = findViewById(R.id.textView18);
-                if(isOn){
+                if (isOn) {
                     ib.setImageResource(R.drawable.off_fix);
                     textView.setText("Currently: Off");
                     isOn = false;
-                }
-                else{
+                } else {
                     ib.setImageResource(R.drawable.on_fix);
                     textView.setText("Currently: On");
                     isOn = true;
@@ -56,8 +54,8 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
         });
 
 
-
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -83,9 +81,9 @@ public class MainActivity extends Activity implements NavigationView.OnNavigatio
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.devices){
-            Intent devices_intent = new Intent(MainActivity.this,Devices.class);
-           this.startActivity(devices_intent);
+        if (id == R.id.devices) {
+            Intent devices_intent = new Intent(MainActivity.this, Devices.class);
+            this.startActivity(devices_intent);
             return true;
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

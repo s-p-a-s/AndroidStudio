@@ -65,7 +65,7 @@ public class Requests extends AsyncTask<String, String, String> {
             while ((line = rd.readLine()) != null) {
                 content += line + "\n";
             }
-        }catch (Exception e) {
+        } catch (Exception e) {
 
         }
         return content;
